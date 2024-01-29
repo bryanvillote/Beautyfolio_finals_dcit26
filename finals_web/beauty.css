@@ -1,0 +1,228 @@
+
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction:column;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.header {
+  background-color: #ffc0cb;
+  padding: 40vh;
+  background-image: url(static/front.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.header h1 {
+margin: 0px;
+text-align: center;
+font-size: 2em;
+z-index: 1000;
+}
+
+.header p {
+  text-align: justify;
+  line-height: 2;
+}
+
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.nav input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-right: 8px; 
+  transition: border-color 0.3s ease;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffdfe2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8599;
+}
+
+.seachbar {
+  display: flex;
+  position: relative;
+}
+
+.products {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  padding: 40px;
+}
+
+.product {
+width: 235px;
+height: 285px;
+background-color: #ffffff;
+padding: 20px;
+text-align: center;
+line-height: -5px;
+box-shadow: 0px 0px 28px -1px rgba(36, 36, 36, 0.144);
+border-radius: 15px;
+transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+  width: 175px;
+  height: 175px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.product h3 {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.product:hover {
+transform: scale(1.05);
+box-shadow: 0px 0px 40px -1px rgb(255, 204, 204);
+}
+
+.footer {
+  background-color: #ffc0cb;
+  padding: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 100px) {
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(255, 220, 220);
+  background-color: rgba(255, 220, 220, 0.9);
+  padding-top: 30px;
+  transition: all 0.5s ease-in;
+  animation: fadeIn 0.5s;
+}
+  
+.modal-content {
+  display: block;
+  max-width: 400px;
+  max-height: 1000px;
+  margin: auto;
+  position: static;
+  background-color: #ffffff;
+  background-size: 90%;
+  border-radius: 15px;
+  padding-bottom: 5px;
+  align-items: center;
+  justify-content: stretch;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+img#modalImage {
+  width: 50%;
+  height: auto;
+  margin-left: 75px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex: 1;
+  padding: 5%;
+  position:static;
+  align-self: center;
+}
+}
+
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+
+}
+
+#modalProductName {
+  width: 90%;
+  display: block;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+#modalProductTitle {
+  width: 80%;
+  display: block;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#modalProductDescription {
+  line-height: 1.5;
+  padding: 20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  max-height: 130px;
+  width: 80%;
+  overflow-y:scroll;
+}
+
+h2#modalProductName {
+  color: #000000;
+  text-align: center;
+}
+
+p#modalProductDescription {
+  color: #000000;
+  text-align: justify;
+  font-size: 13px;
+}
+
+span.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffbaba;
+  cursor: pointer;
+  z-index: 2;
+}

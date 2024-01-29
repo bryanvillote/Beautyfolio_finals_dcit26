@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="beauty.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make-up Catalog</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Beautyfolio</h1>
+            <p>
+                "Introducing Beautyfolio, where beauty meets innovation. 
+                Dive into our exquisite cosmetic catalog, curated with passion and precision. 
+                Discover a world of transformative products designed to elevate your beauty routine. 
+                Unveil your radiant self with Beautyfolio – where every page tells a story of glamour, 
+                confidence, and timeless elegance."
+            </p>
+        </div>
+
+        <div class="nav">
+            <div class="searchbar">
+            <input type="text" placeholder="Find Products">
+            <button type="submit">Search</button>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <img src="static/blush1.webp" alt="blush">
+                <h2>Patrick Ta</h2>
+                <h3>Major Headlines Double-Take Crème & Powder Blush Duo</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/blush2.webp" alt="blush">
+                <h2>Rare Beauty</h2>
+                <h3>Stay Vulnerable Melting Cream Blush</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/blush3.webp" alt="blush">
+                <h2>Kaja</h2>
+                <h3>Cheeky Stamp Blendable Blush</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/blush4.webp" alt="blush">
+                <h2>Makeup By Mario</h2>
+                <h3>Soft Pop Blush Stick</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/lip1.webp" alt="lips">
+                <h2>Rare Beauty</h2>
+                <h3>Soft Pinch Tinted Lip Oil</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/lip2.webp" alt="lips">
+                <h2>Rare Beauty</h2>
+                <h3>Kind Words Lip Liner</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/lip3.webp" alt="lips">
+                <h2 class="wew">Rare Beauty</h2>
+                <h3>Kind Words Matte Lipstick</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/lip4.webp" alt="lips">
+                <h2>Rare Beauty</h2>
+                <h3>With Gratitude Lip Balm</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/powder1.webp" alt="powder">
+                <h2>Chartlotte Tilbury</h2>
+                <h3>Airbrush Flawless Finish Setting Powder</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/powder2.webp" alt="powder">
+                <h2>One/Size Beauty</h2>
+                <h3>Mini Ultimate Blurring Setting Powder</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/powder3.webp" alt="powder">
+                <h2>Huda Beauty</h2>
+                <h3>Easy Bake Loose Baking & Setting Powder</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/powder4.webp" alt="powder">
+                <h2>KVD Beauty</h2>
+                <h3>Lock-It Refillable Mattifying Pressed Finishing Powder</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/brow1.webp" alt="brows">
+                <h2>Rare Beauty</h2>
+                <h3>Brow Harmony Precision Eyebrow Pencil</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/brow2.webp" alt="brows">
+                <h2>Benefit Cosmetics</h2>
+                <h3>POWmade Waterproof Brow Pomade</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/contour1.webp" alt="contour">
+                <h2>Iconic London</h2>
+                <h3>Precision Duo Contour Pot</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/contour2.webp" alt="contour">
+                <h2>Smashbox</h2>
+                <h3>Step-By-Step Contour Kit</h3>
+            </div>
+            
+            <div class="product">
+                <img src="static/eyeshadow1.webp" alt="eyeshadow">
+                <h2>Kaja</h2>
+                <h3>Eye Bento Bouncy Eyeshadow Trio</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/eyeshadow2.webp" alt="eyeshadow">
+                <h2>Sephora Collection</h2>
+                <h3>Precious Gemstones Mid-Size Eyeshadow Palette</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/highlighter1.webp" alt="highlight">
+                <h2>Rare Beauty</h2>
+                <h3>Positive Light Liquid Luminizer Highlight</h3>
+            </div>
+
+            <div class="product">
+                <img src="static/highlighter2.webp" alt="highlight">
+                <h2>Fenty Beauty</h2>
+                <h3>Match Stix Duo Contour + Highlighter Set</h3>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>&copy; Beautyfolio. All rights reserved.</p><br>
+            <p></p>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" alt="Product Image">
+            <div class="product-details">
+                <h2 id="modalProductName">Product Name</h2>
+                <h3 id="modalProductTitle">Product Title</h3>
+                <p id="modalProductDescription">product descriptions</p>
+            </div>
+        </div>
+    </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal')
+    
+            // Get the image and insert it inside the modal
+            var images = document.querySelectorAll('.product img')
+            var prod = document.getElementsByClassName('product')
+            var modalImage = document.getElementById('modalImage')
+            var modalProductName = document.getElementById('modalProductName')
+            var modalProductTitle = document.getElementById('modalProductTitle')
+            var modalProductDescription = document.getElementById('modalProductDescription')
+            
+    
+            function openModal(productName, productTitle, productDescription, productImageSrc) {
+                modal.style.display = 'block';
+                modalProductName.textContent = productName;
+                modalProductTitle.textContent = productTitle;
+                modalProductDescription.textContent = productDescription;
+                modalImage.src = productImageSrc;
+            }
+    
+            function loadProductDescription(productFileName) {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            // Update modal product description
+                            document.getElementById('modalProductDescription').innerHTML = xhr.responseText;
+                        } else {
+                            // Handle error
+                            document.getElementById('modalProductDescription').innerHTML = 'Failed to load description. Status: ' + xhr.status;
+                        }
+                    }
+                };
+            
+                // Use GitHub Pages URL without the 'tree' part
+                xhr.open('GET', 'https://bryanvillote.github.io/Beautyfolio-mejo-final--/descriptions/' + productFileName + '.txt', true);
+                xhr.send();
+                console.log('Fetching description for: ' + productFileName);
+            }
+            
+
+            // Close the modal when the close button is clicked
+            function closeModal(){
+                modal.style.display = 'none';
+            }
+    
+            // Close the modal when clicking outside of it
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            }
+            // To get the image productname, producttitle, and productdescriptions
+            document.querySelectorAll('.product img').forEach(function (image) {
+                image.addEventListener('click', function (){
+                    var productName = this.parentElement.querySelector('h2').textContent;
+                    var productTitle = this.parentElement.querySelector('h3').textContent;
+                    var productFileName = productTitle.replace(/ /g, '_'); 
+                    var productImageSrc = this.src;
+                    openModal(productName, productTitle, '', productImageSrc);
+                    loadProductDescription(productFileName); 
+                })
+            });
+    
+            // Get the search input and submit button
+            const searchInput = document.querySelector('.searchbar input')
+            const searchSubmit = document.querySelector('.searchbar button')
+
+            // Function to filter the products based on the search input
+            function filterProducts(searchTerm) {
+              const products = document.querySelectorAll('.products .product')
+              products.forEach((product) => {
+                const productName = product.querySelector('h2').textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                  product.style.display = 'block'
+                } else {
+                  product.style.display = 'none'
+                }
+              })
+            };
+        
+            // Add an event listener to the search input
+            searchInput.addEventListener('input', () => {
+              const searchTerm = searchInput.value.toLowerCase()
+              filterProducts(searchTerm);
+            })
+        
+            // Add an event listener to the search submit button (optional)
+            searchSubmit.addEventListener('click', (e) =>{
+              e.preventDefault()
+              const searchTerm = searchInput.value.toLowerCase()
+              filterProducts(searchTerm)
+            });
+        </script>
+    
+</body>
+</html>
